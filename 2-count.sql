@@ -17,3 +17,4 @@ FROM Production.Product; -- (Retornou 504 rows)
 --b) Quantos tamananhos de produtos temos cadastrados em nossa tabela
 SELECT COUNT(Size)
 FROM Production.Product; (Retornou 211 itens)
+

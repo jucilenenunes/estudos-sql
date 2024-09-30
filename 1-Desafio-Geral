@@ -1,0 +1,43 @@
+--Desafios Gerais
+-- 1- Quantos produtos temos cadastrado no sistema que custam mais que 1500 dolares?
+
+Select count(ListPrice) from Production.Product where ListPrice >= 1500;
+--Retornou 39 itens
+
+-- 2- Quantas pessoas temos com o sobrenome que inicia com a letra P?
+
+Select count(LastName) from Person.Person where LastName Like '%P';
+-- Retornou 12 dados
+
+-- 3- Em quantas cidades únicas estão cadastrados os nossos clientes?
+Select Distinct  Count(StateProvinceName) from Person.vStateProvinceCountryRegion; 
+-- Retornou 181
+
+--(Explicação do Professor)
+Select count(distinct(city)) from Person.Address;
+-- Retorna 575
+
+-- 4- Quais são as cidades únicas estão cadastrados os nossos clientes?
+Select Distinct city from person.Address;
+-- Retorna 575 Cidades
+
+-- 5- Quantos produtos vermelhos tem o preço entre 500 a 1000 dolares?
+select name, color, ListPrice from Production.Product
+where 
+color = 'Red'
+and ListPrice between 500 and 1000
+order by ListPrice;
+--Retornou 11 dados
+
+--  Solução do professor
+select count(*)
+from Production.Product
+where color = 'Red'
+and ListPrice between 500 and 1000; 
+
+
+--6- Quantos produtos cadastrados tem a palavra 'road' no nome deles? 
+select count(name) 
+from Production.Product
+where name like '%road%';
+-- Retornou 103

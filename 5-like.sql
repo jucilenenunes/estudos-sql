@@ -20,15 +20,3 @@ SELECT *
 FROM Person.Person
 WHERE FirstName LIKE '%ro_%'; -- O _ substitui uma palavra na busca.
 
---Desafios Gerais
--- 1- Quantos produtos temos cadastrado no sistema que custam mais que 1500 dolares?
-
-Select count(ListPrice) from Production.Product where ListPrice >= 1500;
---Retornou 39 itens
-
--- 2- Quantas pessoas temos com o sobrenome que inicia com a letra P?
-
-Select count(LastName) from Person.Person where LastName Like '%P';
--- Retornou 12 dados
-
--- 3- Em quantas cidades únicas estão cadastrados os nossos clientes?
